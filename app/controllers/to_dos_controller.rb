@@ -1,6 +1,8 @@
 class ToDosController < ApplicationController
   before_action :set_to_do, only: [:show, :edit, :update, :destroy]
 
+
+
   # GET /to_dos
   # GET /to_dos.json
   def index
@@ -62,13 +64,16 @@ class ToDosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_to_do
-      @to_do = ToDo.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def to_do_params
-      params.require(:to_do).permit(:text, :due_date, :assigned_date, :completed_date, :complete)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_to_do
+    @to_do = ToDo.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def to_do_params
+    params.require(:to_do).permit(:text, :due_date, :complete)
+  end
+
+
 end
