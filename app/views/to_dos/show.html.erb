@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @to_do.text %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @to_do.due_date %>
+</p>
+
+<p>
+  <strong>Assigned date:</strong>
+  <%= @to_do.assigned_date %>
+</p>
+
+<p>
+  <strong>Completed date:</strong>
+  <%= @to_do.completed_date %>
+</p>
+
+<p>
+  <strong>Complete:</strong>
+  <%= @to_do.complete %>
+</p>
+
+<%= link_to 'Edit', edit_to_do_path(@to_do) %> |
+<%= link_to 'Back', to_dos_path %>
